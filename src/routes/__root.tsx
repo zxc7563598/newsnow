@@ -10,6 +10,7 @@ import { GlobalOverlayScrollbar } from "~/components/common/overlay-scrollbar"
 import { Footer } from "~/components/footer"
 import { Toast } from "~/components/common/toast"
 import { SearchBar } from "~/components/common/search-bar"
+import Search from "~/components/customize/search"
 
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient
@@ -58,6 +59,7 @@ function RootComponent() {
           "lg:(min-h-[calc(100vh-194px)])",
         ])}
         >
+          <Search />
           <Outlet />
         </main>
         <footer className="py-6 flex flex-col items-center justify-center text-sm text-neutral-500 font-mono">
