@@ -1,16 +1,16 @@
 import { motion } from "framer-motion"
 
-// function ThemeToggle() {
-//   const { isDark, toggleDark } = useDark()
-//   return (
-//     <li onClick={toggleDark} className="cursor-pointer [&_*]:cursor-pointer transition-all">
-//       <span className={$("inline-block", isDark ? "i-ph-moon-stars-duotone" : "i-ph-sun-dim-duotone")} />
-//       <span>
-//         {isDark ? "浅色模式" : "深色模式"}
-//       </span>
-//     </li>
-//   )
-// }
+export function ThemeToggle() {
+  const { isDark, toggleDark } = useDark()
+  return (
+    <button
+      type="button"
+      title="Switch"
+      className={$("inline-block cursor-pointer transition-all", isDark ? "i-ph-moon-stars-duotone" : "i-ph-sun-dim-duotone")}
+      onClick={toggleDark}
+    />
+  )
+}
 
 export function Menu() {
   const { loggedIn, login, logout, userInfo, enableLogin } = useLogin()
