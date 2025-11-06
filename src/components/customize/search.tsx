@@ -33,7 +33,7 @@ export default function Search() {
         <select
           value={selected.name}
           onChange={e => setSelected(engines.find(en => en.name === e.target.value)!)}
-          className="px-3 py-2 rounded-lg bg-primary/10 hover:bg-primary/30 backdrop-blur-sm text-sm outline-none h-full cursor-pointer"
+          className="w-auto px-3 py-2 rounded-lg bg-primary/10 hover:bg-primary/30 backdrop-blur-sm text-sm outline-none h-full cursor-pointer"
         >
           {engines.map(item => (
             <option key={item.name} value={item.name} className="text-black">
@@ -48,14 +48,14 @@ export default function Search() {
           onChange={e => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           type="text"
-          className="flex-1 px-3 py-2 rounded-lg bg-transparent border border-primary/30 focus:border-primary/60 outline-none cursor-text"
+          className="w-full px-3 py-2 rounded-lg bg-transparent border border-primary/30 focus:border-primary/60 outline-none cursor-text"
         />
 
         {/* 搜索按钮 */}
         <button
           type="button"
           onClick={search}
-          className="px-4 py-2 rounded-lg bg-primary/10 hover:bg-primary/30 transition h-full cursor-pointer"
+          className="px-4 py-2 min-w-20 rounded-lg bg-primary/10 hover:bg-primary/30 transition h-full cursor-pointer"
         >
           搜索
         </button>
